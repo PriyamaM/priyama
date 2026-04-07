@@ -1,24 +1,29 @@
 <style>
   .travel-entry {
-    max-width: 400px;
+    max-width: 760px;
     margin: 40px auto 56px auto;
+  }
+
+  .travel-entry-photo {
     text-align: center;
+    margin-bottom: 22px;
   }
 
   .travel-entry img {
-  display: block;
-  width: 400px;
-  max-width: 70%;
-  height: auto;
-  margin: 0 auto 18px auto;
-  border: 1px solid #222;
-}
-  
+    display: block;
+    width: 400px;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto 18px auto;
+    border: 1px solid #222;
+  }
+
   .travel-entry-caption {
-    margin: 0 0 22px 0;
+    margin: 0;
     font-size: 1rem;
     line-height: 1.4;
     color: #222;
+    text-align: center;
   }
 
   .travel-entry-text {
@@ -40,10 +45,11 @@
 </style>
 
 <div class="travel-entry">
-  <img src="stonehenge.jpg" alt="Stonehenge, Wiltshire" />
-
-  <div class="travel-entry-caption">
-    Stonehenge, Wiltshire, England / 2026
+  <div class="travel-entry-photo">
+    <img src="stonehenge.jpg" alt="Stonehenge, Wiltshire" />
+    <div class="travel-entry-caption">
+      Stonehenge, Wiltshire, England / 2026
+    </div>
   </div>
 
   <div class="travel-entry-text">
