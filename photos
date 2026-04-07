@@ -1,0 +1,62 @@
+<style>
+  .travel-entry {
+    max-width: 980px;
+    margin: 40px auto 56px auto;
+    text-align: center;
+  }
+
+  .travel-entry img {
+    display: block;
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    margin: 0 auto 18px auto;
+    border: 1px solid #222;
+  }
+
+  .travel-entry-caption {
+    margin: 0 0 26px 0;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #222;
+  }
+
+  .travel-entry-text {
+    max-width: 980px;
+    margin: 0 auto;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .travel-entry-text p {
+    margin: 0;
+  }
+
+  .travel-entry-text a {
+    color: #0000EE;
+    text-decoration: underline;
+  }
+</style>
+
+<div class="travel-entry">
+  <img src="images/stonehenge.jpg" alt="Stonehenge, Wiltshire" />
+
+  <div class="travel-entry-caption">
+    Stonehenge, Wiltshire, England / 2026
+  </div>
+
+  <div class="travel-entry-text">
+    <p>
+      The Stonehenge site preserves human activity from 8500–7000 BC. The first major monument here,
+      a circular earthwork enclosure, was laid out around 3000 BC. Later construction drew material from
+      far beyond Wessex, including bluestones from southwest Wales and the Altar Stone from northeast
+      Scotland. Its principal axis was aligned to the solstices, binding the monument to a recurring
+      astronomical order. Evidence from the wider Stonehenge landscape suggests that it also served as a
+      point of assembly, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6415963/" target="_blank" rel="noopener noreferrer">attracting people from multiple regions</a>.
+      My guide remarked, with some understatement, that these were “not stupid people.” Stonehenge shows a
+      society capable of invention and cooperation. On the same day, my co-author texted me that Sharif
+      University of Technology in Tehran <a href="https://www.reuters.com/business/aerospace-defense/trump-vows-hell-iran-if-strait-stays-shut-says-deal-is-possible-2026-04-06/" target="_blank" rel="noopener noreferrer">had been hit in the latest strikes</a>.
+    </p>
+  </div>
+</div>
