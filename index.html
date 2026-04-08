@@ -1,33 +1,486 @@
-<article class="paper">
-  <p class="paper-line">
-    <span class="paper-title">Government by Discussion: Deliberation, Media, and Policy-Making</span>
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Priyama Majumdar</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --link: #0000FF;
+      --rule: #d9d9d9;
+      --max-width: 760px;
+      --mono: "Courier New", Courier, monospace;
+    }
 
-  <div class="paper-meta-line">
-    <span class="paper-meta">(with Elaheh Fatemipour)</span>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-    <a
-      class="paper-link"
-      href="https://www.dropbox.com/scl/fi/803fumqpmqj4j134j91n3/Government-by-Discussion.pdf?dl=0&rlkey=k6c8n99eipu1pgesh965uweqg"
-      target="_blank"
-      rel="noopener noreferrer"
-    >[pdf]</a>
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
-    <details class="abstract-inline">
-      <summary>[abstract]</summary>
-      <div class="abstract-text">
-        <p>
-          This paper studies whether parliamentary deliberation affects policy-making,
-          and whether its effects depend on public exposure. Using quasi-random variation
-          from the computerized ballot that determines which policies are discussed during
-          Question Hour in the Indian Parliament, we show that debated issues are more likely
-          to appear in subsequent bills and that related bills progress faster through the
-          legislative process. These effects are substantially stronger when debate receives
-          media coverage. Reductions in news attention cut the policy impact of debate by
-          roughly half, implying that public exposure is an important mechanism through which
-          deliberation shapes policy.
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a,
+    a:visited {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .site {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 32px auto 56px;
+    }
+
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .site-tagline {
+      margin: 10px 0 0;
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--text);
+    }
+
+    .profile-photo {
+      width: 124px;
+      height: auto;
+      border: 1px solid var(--rule);
+    }
+
+    .top-nav {
+      margin: 14px 0 30px;
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      margin-top: 34px;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-family: var(--mono);
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--text);
+    }
+
+    .small-links {
+      margin-top: 14px;
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    .paper {
+      margin: 0 0 28px;
+    }
+
+    .paper-line {
+      margin: 0 0 2px;
+      line-height: 1.65;
+    }
+
+    .paper-title {
+      color: var(--text);
+    }
+
+    .paper-meta-line {
+      margin: 0;
+      color: var(--text);
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+
+    .paper-meta {
+      color: var(--text);
+    }
+
+    .paper-link,
+    .paper-link:visited {
+      display: inline-block;
+      margin-left: 8px;
+      color: var(--link);
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .paper-link:hover,
+    .paper-link:focus {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .abstract-inline {
+      display: inline-block;
+      margin-left: 8px;
+      vertical-align: baseline;
+    }
+
+    .abstract-inline summary {
+      display: inline-block;
+      cursor: pointer;
+      list-style: none;
+      color: var(--link);
+      font-family: var(--mono);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .abstract-inline summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .abstract-inline summary::marker {
+      content: "";
+    }
+
+    .abstract-inline[open] {
+      display: block;
+      margin-left: 0;
+      margin-top: 8px;
+    }
+
+    .abstract-inline[open] summary {
+      margin-left: 0;
+    }
+
+    .abstract-text {
+      margin-top: 8px;
+      padding-left: 14px;
+      border-left: 1px solid var(--rule);
+    }
+
+    .abstract-text p {
+      margin: 0;
+      color: var(--text);
+      font-size: 0.96rem;
+      line-height: 1.74;
+    }
+
+    .footer-space {
+      height: 8px;
+    }
+
+    @media (max-width: 680px) {
+      .site {
+        width: min(var(--max-width), calc(100% - 24px));
+        margin: 22px auto 38px;
+      }
+
+      .site-header {
+        display: block;
+      }
+
+      .profile-photo {
+        margin-top: 14px;
+        width: 112px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <header class="site-header">
+      <div>
+        <h1 class="site-title">Priyama Majumdar</h1>
+        <p class="site-tagline">
+          applied microeconomics / political economy / development / gender
         </p>
       </div>
-    </details>
-  </div>
-</article>
+
+      <img
+        src="profile.JPG"
+        alt="Priyama Majumdar"
+        class="profile-photo"
+      />
+    </header>
+
+    <nav class="top-nav" aria-label="Primary navigation">
+      [<a href="#bio">bio</a>]
+      [<a href="#working-papers">working papers</a>]
+      [<a href="#publications">publications</a>]
+      [<a href="#contact">contact</a>]
+      [<a href="photos.html">travels</a>]
+    </nav>
+
+    <section id="bio" class="section">
+      <h2 class="section-title">[bio]</h2>
+
+      <p>
+        I am an applied microeconomist. My research spans (i) political economy,
+        where I study how political institutions shape policy design and implementation;
+        (ii) development and culture, where I study how norms and informal institutions
+        influence behavior and policy effectiveness; and (iii) gender, where I study
+        the sources of gender gaps in household decisions and labor market outcomes.
+        I use both experimental and observational methods, drawing on administrative
+        data, text-as-data, and machine-learning tools. I currently work on projects
+        in India, Denmark, and the United Kingdom.
+      </p>
+
+      <p>
+        I will join Princeton University as a postdoctoral researcher in September 2026.
+      </p>
+
+      <p class="small-links">
+        [<a
+          href="https://www.dropbox.com/scl/fi/6mhndwe2h00qac5xtjrt0/Priyama_CV_Latest.pdf?dl=0&rlkey=czpcbrg3jbp7umn40eln0xanf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >cv</a>]
+        [<a href="mailto:priyama.majumdar@warwick.ac.uk">email</a>]
+      </p>
+    </section>
+
+    <section id="working-papers" class="section">
+      <h2 class="section-title">[working papers]</h2>
+
+      <article class="paper">
+        <p class="paper-line">
+          <span class="paper-title">Political Empowerment and Marital Practices</span>
+        </p>
+        <div class="paper-meta-line">
+          <span class="paper-meta">(R&amp;R, <em>Journal of Development Economics</em>)</span>
+          <a
+            class="paper-link"
+            href="https://www.dropbox.com/scl/fi/0xxxodyl0gohrllitan6h/Dowry_and_Political_Leadership.pdf?dl=0&rlkey=zk5eb30em3h0xbe2v3j8n5hxd"
+            target="_blank"
+            rel="noopener noreferrer"
+          >[pdf]</a>
+          <details class="abstract-inline">
+            <summary>[abstract]</summary>
+            <div class="abstract-text">
+              <p>
+                This paper examines whether expanding women’s political representation
+                affects marital practices in rural India. Exploiting the reservation of
+                village council leadership positions for women under India’s 1992
+                constitutional amendment, I show that exposure to female leaders delays
+                marriage by improving women’s economic opportunities, but also increases
+                dowry payments. The increase in dowry is concentrated in more patriarchal
+                settings, where the social costs of delayed marriage are higher. The
+                results suggest that political empowerment can shift marital behavior,
+                but that its effects are constrained—and partly offset—by entrenched
+                social norms.
+              </p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="paper">
+        <p class="paper-line">
+          <span class="paper-title">Government by Discussion: Deliberation, Media, and Policy-Making</span>
+        </p>
+        <div class="paper-meta-line">
+          <span class="paper-meta">(with Elaheh Fatemipour)</span>
+          <a
+            class="paper-link"
+            href="https://www.dropbox.com/scl/fi/803fumqpmqj4j134j91n3/Government-by-Discussion.pdf?dl=0&rlkey=k6c8n99eipu1pgesh965uweqg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >[pdf]</a>
+          <details class="abstract-inline">
+            <summary>[abstract]</summary>
+            <div class="abstract-text">
+              <p>
+                This paper studies whether parliamentary deliberation affects policy-making,
+                and whether its effects depend on public exposure. Using quasi-random variation
+                from the computerized ballot that determines which policies are discussed during
+                Question Hour in the Indian Parliament, we show that debated issues are more likely
+                to appear in subsequent bills and that related bills progress faster through the
+                legislative process. These effects are substantially stronger when debate receives
+                media coverage. Reductions in news attention cut the policy impact of debate by
+                roughly half, implying that public exposure is an important mechanism through which
+                deliberation shapes policy.
+              </p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="paper">
+        <p class="paper-line">
+          <span class="paper-title">The Cultural Premium: How Cultural Distance, Economic Contributions and Value Alignment Shape Immigration Attitudes</span>
+        </p>
+        <div class="paper-meta-line">
+          <span class="paper-meta">(with Elaheh Fatemipour)</span>
+          <a
+            class="paper-link"
+            href="https://www.dropbox.com/scl/fi/31obgis84ilp7j42esmf0/Immigration_Elaheh_Priyama.pdf?dl=0&rlkey=674ygildlw9225mjwsfcqj84v"
+            target="_blank"
+            rel="noopener noreferrer"
+          >[pdf]</a>
+          <details class="abstract-inline">
+            <summary>[abstract]</summary>
+            <div class="abstract-text">
+              <p>
+                This paper quantifies a cultural premium in immigration attitudes: the
+                additional income a culturally distant immigrant must earn to be equally
+                preferred to a culturally close immigrant for remaining in the host country.
+                Using a representative survey experiment in the United Kingdom, we estimate
+                that this premium exceeds £20,000 when the immigrant’s personal values are
+                unobserved, but falls by 73% when respondents learn that his values align
+                with UK norms. Information on value alignment also reduces concerns about
+                cultural erosion by 35%. The findings indicate that opposition to culturally
+                distant immigrants reflects, to a large extent, beliefs about their underlying
+                values rather than origin per se.
+              </p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="paper">
+        <p class="paper-line">
+          <span class="paper-title">Postpartum Depression and the Motherhood Penalty</span>
+        </p>
+        <div class="paper-meta-line">
+          <span class="paper-meta">(with Sonia Bhalotra, N. Meltem Daysal, Louis Fréget, Jonas Cuzulan Hirani, Mircea Trandafir, Miriam Wüst, and Tom Zohar)</span>
+          <a
+            class="paper-link"
+            href="https://www.dropbox.com/scl/fi/798tjt3nt977yh8pphc39/CP_and_mental_health.pdf?dl=0&rlkey=nqs4angdssjtipb246vvfz5w7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >[pdf]</a>
+          <details class="abstract-inline">
+            <summary>[abstract]</summary>
+            <div class="abstract-text">
+              <p>
+                This paper studies how postpartum depression affects mothers’ labor-market
+                trajectories after childbirth. Using Danish administrative records linked to
+                validated postpartum depression screenings, we show that depressed and
+                non-depressed mothers follow similar pre-birth employment trends but diverge
+                sharply after birth, generating persistent employment gaps. These effects are
+                larger for less educated mothers and for women in less family-friendly jobs.
+                The results identify postpartum depression as an important and unequal
+                contributor to the motherhood penalty.
+              </p>
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <section id="publications" class="section">
+      <h2 class="section-title">[publications]</h2>
+
+      <article class="paper">
+        <p class="paper-line">
+          <span class="paper-title">Exponential Growth Bias in the Prediction of COVID-19 Spread and Economic Expectation</span>
+        </p>
+        <div class="paper-meta-line">
+          <span class="paper-meta">(with Ritwik Banerjee; <em>Economica</em>, 2023)</span>
+          <a
+            class="paper-link"
+            href="https://www.dropbox.com/scl/fi/pace9iim0ct2tg0k1l247/Economica-2023-Banerjee-Exponential-growth-bias-in-the-prediction-of-COVID-19-spread-and-economic-expectation.pdf?dl=0&rlkey=1a7n58qrs4cdfzuj8knm0glz3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >[pdf]</a>
+          <details class="abstract-inline">
+            <summary>[abstract]</summary>
+            <div class="abstract-text">
+              <p>
+                This paper studies exponential growth bias in beliefs about COVID-19
+                transmission and examines how reducing this bias affects economic expectations
+                and risky investment. Using four experimental interventions, we show that simple
+                feedback and forecast information substantially reduce misperceptions about
+                epidemic growth. Correcting the bias also dampens expectations of macroeconomic
+                deterioration and reduces risky investment. The results highlight how errors in
+                processing non-linear growth can shape economic beliefs and choice under uncertainty.
+              </p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="paper">
+        <p class="paper-line">
+          <span class="paper-title">Exponential-Growth Prediction Bias and Compliance with Safety Measures Related to COVID-19</span>
+        </p>
+        <div class="paper-meta-line">
+          <span class="paper-meta">(with Ritwik Banerjee and Joydeep Bhattacharya; <em>Social Science &amp; Medicine</em>, 2020)</span>
+          <a
+            class="paper-link"
+            href="https://www.dropbox.com/scl/fi/hgo881aeyaxkjjzi20pfu/1-s2.0-S0277953620306924-main.pdf?dl=0&rlkey=awq8muq99tggj0ts6pa593x0x"
+            target="_blank"
+            rel="noopener noreferrer"
+          >[pdf]</a>
+          <details class="abstract-inline">
+            <summary>[abstract]</summary>
+            <div class="abstract-text">
+              <p>
+                This paper studies exponential-growth prediction bias in beliefs about COVID-19
+                transmission and its implications for compliance with protective behavior. Using an
+                incentivized online experiment spanning countries at different stages of the pandemic,
+                we show that respondents systematically underestimate infection growth, and that larger
+                bias is associated with lower compliance with safety measures. A simple information
+                intervention that presents prior case counts in raw numbers rather than graphs
+                significantly reduces the bias. The findings suggest that how epidemic information
+                is presented can improve risk perception and public-health behavior.
+              </p>
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="section-title">[contact]</h2>
+      <p>
+        <a href="mailto:priyama.majumdar@warwick.ac.uk">priyama.majumdar@warwick.ac.uk</a>
+      </p>
+    </section>
+
+    <div class="footer-space"></div>
+  </main>
+</body>
+</html>
+
