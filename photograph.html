@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photograph — Priyama Majumdar</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --link: #0000FF;
+      --rule: #cfcfcf;
+      --max-width: 780px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 17px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-weight: 500;
+      line-height: 1.75;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a,
+    a:visited {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .site {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 40px auto 64px;
+    }
+
+    .site-header {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 22px;
+    }
+
+    .site-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 3.1rem;
+      line-height: 1.08;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .header-photo-link {
+      font-size: 1rem;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .top-nav {
+      margin: 0 0 34px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .top-nav a {
+      margin-right: 18px;
+      white-space: nowrap;
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .photo-wrap {
+      width: 180px;
+    }
+
+    .portrait {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--rule);
+    }
+
+    @media (max-width: 680px) {
+      html {
+        font-size: 16px;
+      }
+
+      .site {
+        width: min(var(--max-width), calc(100% - 24px));
+        margin: 24px auto 42px;
+      }
+
+      .site-title {
+        font-size: 2.4rem;
+      }
+
+      .top-nav a {
+        margin-right: 14px;
+      }
+
+      .photo-wrap {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <header class="site-header">
+      <div class="site-title-row">
+        <h1 class="site-title">Priyama Majumdar</h1>
+        <a class="header-photo-link" href="photograph.html">[photo]</a>
+      </div>
+    </header>
+
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a href="index.html#bio">Bio</a>
+      <a href="index.html#working-papers">Working Papers</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="photos.html">Travels</a>
+    </nav>
+
+    <section>
+      <h2 class="section-title">Photograph</h2>
+      <div class="photo-wrap">
+        <img src="profile.JPG" alt="Priyama Majumdar" class="portrait" />
+      </div>
+    </section>
+  </main>
+</body>
+</html>
