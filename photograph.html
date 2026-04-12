@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Priyama Majumdar — Photos</title>
+  <title>Priyama Majumdar — Photo</title>
   <style>
     :root {
       --bg: #ffffff;
@@ -90,15 +90,7 @@
       white-space: nowrap;
     }
 
-    .photo-grid {
-      display: flex;
-      gap: 28px;
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
-
-    figure {
-      margin: 0;
+    .photo-wrap {
       width: 180px;
     }
 
@@ -107,12 +99,6 @@
       height: auto;
       display: block;
       border: 1px solid var(--rule);
-    }
-
-    figcaption {
-      margin-top: 10px;
-      font-size: 0.98rem;
-      line-height: 1.5;
     }
 
     @media (max-width: 680px) {
@@ -133,12 +119,8 @@
         margin-right: 14px;
       }
 
-      figure {
+      .photo-wrap {
         width: 150px;
-      }
-
-      .photo-grid {
-        gap: 20px;
       }
     }
   </style>
@@ -148,7 +130,7 @@
     <header class="site-header">
       <div class="site-title-row">
         <h1 class="site-title">Priyama Majumdar</h1>
-        <a class="header-photo-link" href="photograph.html">[photos]</a>
+        <a class="header-photo-link" href="photograph.html">[photo]</a>
       </div>
     </header>
 
@@ -160,16 +142,10 @@
       <a href="photos.html">Travels</a>
     </nav>
 
-    <section class="photo-grid" aria-label="Portrait photographs">
-      <figure>
-        <img src="profile_long.JPG" alt="Priyama with long hair" class="portrait" />
-        <figcaption>With long hair.</figcaption>
-      </figure>
-
-      <figure>
-        <img src="profile_short.jpg" alt="Priyama with short hair" class="portrait" />
-        <figcaption>With short hair.</figcaption>
-      </figure>
+    <section aria-label="Portrait">
+      <div class="photo-wrap">
+        <img src="profile_long.JPG" alt="Priyama Majumdar" class="portrait" />
+      </div>
     </section>
   </main>
 </body>
