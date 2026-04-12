@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photograph — Priyama Majumdar</title>
+  <title>Priyama Majumdar — Photos</title>
   <style>
     :root {
       --bg: #ffffff;
@@ -90,14 +90,15 @@
       white-space: nowrap;
     }
 
-    .section-title {
-      margin: 0 0 16px;
-      font-size: 1.18rem;
-      font-weight: 700;
-      color: var(--text);
+    .photo-grid {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      align-items: flex-start;
     }
 
-    .photo-wrap {
+    figure {
+      margin: 0;
       width: 180px;
     }
 
@@ -106,6 +107,12 @@
       height: auto;
       display: block;
       border: 1px solid var(--rule);
+    }
+
+    figcaption {
+      margin-top: 10px;
+      font-size: 0.98rem;
+      line-height: 1.5;
     }
 
     @media (max-width: 680px) {
@@ -126,8 +133,12 @@
         margin-right: 14px;
       }
 
-      .photo-wrap {
+      figure {
         width: 150px;
+      }
+
+      .photo-grid {
+        gap: 20px;
       }
     }
   </style>
@@ -137,7 +148,7 @@
     <header class="site-header">
       <div class="site-title-row">
         <h1 class="site-title">Priyama Majumdar</h1>
-        <a class="header-photo-link" href="photograph.html">[photo]</a>
+        <a class="header-photo-link" href="photograph.html">[photos]</a>
       </div>
     </header>
 
@@ -149,11 +160,16 @@
       <a href="photos.html">Travels</a>
     </nav>
 
-    <section>
-      <h2 class="section-title">Photograph</h2>
-      <div class="photo-wrap">
-        <img src="profile.JPG" alt="Priyama Majumdar" class="portrait" />
-      </div>
+    <section class="photo-grid" aria-label="Portrait photographs">
+      <figure>
+        <img src="profile_long.JPG" alt="Priyama Majumdar with long hair" class="portrait" />
+        <figcaption>With long hair.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="profile_short.JPG" alt="Priyama Majumdar with short hair" class="portrait" />
+        <figcaption>With short hair.</figcaption>
+      </figure>
     </section>
   </main>
 </body>
