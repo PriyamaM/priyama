@@ -7,11 +7,14 @@
 
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #000000;
-      --link: #0000ff;
-      --max-width: 820px;
-    }
+  --bg: #ffffff;
+  --text: #000000;
+  --link: #0000ff;
+  --journal: #3f3f46;
+  --journal-bg: #f4f4f5;
+  --journal-border: #d4d4d8;
+  --max-width: 820px;
+}
 
     *,
     *::before,
@@ -128,6 +131,14 @@
       font-size: 0.98rem;
       line-height: 1.28;
       color: var(--text);
+    }
+    .paper-meta em {
+      color: var(--journal);
+      background: var(--journal-bg);
+      border-bottom: 1px solid var(--journal-border);
+      padding: 0 0.18em;
+      font-style: italic;
+      font-weight: 700;
     }
 
     .paper-actions {
