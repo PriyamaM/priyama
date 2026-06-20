@@ -124,6 +124,10 @@
       white-space: nowrap;
     }
 
+    #research {
+      counter-reset: paper;
+    }
+
     .theme {
       margin: 0 0 18px;
     }
@@ -138,16 +142,24 @@
 
     .paper-list {
       margin: 0;
-      padding-left: 20px;
+      padding-left: 0;
+      list-style: none;
     }
 
     .paper-list li {
-      margin: 0 0 11px;
-      padding-left: 2px;
+      counter-increment: paper;
+      position: relative;
+      margin: 0 0 12px;
+      padding-left: 1.55em;
     }
 
-    .paper-list li::marker {
-      color: var(--blue);
+    .paper-list li::before {
+      content: counter(paper) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--text);
+      font-weight: 500;
     }
 
     .paper-title {
@@ -298,57 +310,50 @@
       <h2 class="section-title">Research</h2>
 
       <p class="research-index">
-        <a href="#gender">Gender</a>
-        <a href="#development-culture">Development and Culture</a>
         <a href="#political-economy">Political Economy</a>
+        <a href="#development-culture">Development and Culture</a>
+        <a href="#gender">Gender</a>
         <a href="#covid">Covid</a>
       </p>
 
-      <div id="gender" class="theme">
-        <h3 class="theme-title">Gender</h3>
+      <div id="political-economy" class="theme">
+        <h3 class="theme-title">Political Economy</h3>
 
-        <ul class="paper-list">
+        <ol class="paper-list">
           <li>
-            <p class="paper-title">Postpartum Depression and the Motherhood Penalty</p>
-            <p class="paper-details">R&amp;R, <span class="journal">The Review of Economics and Statistics</span></p>
+            <p class="paper-title">Government by Discussion: Deliberation, Media, and Policy-Making</p>
             <p class="paper-details">
               with
-              <a class="coauthor" href="https://sites.google.com/site/srbhalotra/" target="_blank" rel="noopener noreferrer">Sonia Bhalotra</a>,
-              <a class="coauthor" href="https://meltemdaysal.com/" target="_blank" rel="noopener noreferrer">N. Meltem Daysal</a>,
-              <a class="coauthor" href="https://www.louisfreget.com/" target="_blank" rel="noopener noreferrer">Louis Fréget</a>,
-              <a class="coauthor" href="https://sites.google.com/view/jonas-hirani/home" target="_blank" rel="noopener noreferrer">Jonas Cuzulan Hirani</a>,
-              <a class="coauthor" href="https://www.mirceatrandafir.com/" target="_blank" rel="noopener noreferrer">Mircea Trandafir</a>,
-              <a class="coauthor" href="https://sites.google.com/site/miriamwuestecon/home" target="_blank" rel="noopener noreferrer">Miriam Wüst</a>,
-              and
-              <a class="coauthor" href="https://tomzohar.com/" target="_blank" rel="noopener noreferrer">Tom Zohar</a>
+              <a class="coauthor" href="https://sites.google.com/view/elahehfatemipour/" target="_blank" rel="noopener noreferrer">Elaheh Fatemipour</a>
             </p>
             <p class="paper-actions">
               <a
                 class="action-link"
-                href="https://www.dropbox.com/scl/fi/798tjt3nt977yh8pphc39/CP_and_mental_health.pdf?dl=0&amp;rlkey=nqs4angdssjtipb246vvfz5w7"
+                href="https://www.dropbox.com/scl/fi/803fumqpmqj4j134j91n3/Government-by-Discussion.pdf?dl=0&amp;rlkey=k6c8n99eipu1pgesh965uweqg"
                 target="_blank"
                 rel="noopener noreferrer"
               >[pdf]</a>
-              <button type="button" class="abstract-toggle" data-target="abs-2">[abstract]</button>
+              <button type="button" class="abstract-toggle" data-target="abs-3">[abstract]</button>
             </p>
-            <div class="abstract-text" id="abs-2">
-              This paper studies how postpartum depression affects mothers’ labor-market
-              trajectories after childbirth. Using Danish administrative records linked to
-              validated postpartum depression screenings, we show that depressed and
-              non-depressed mothers follow similar pre-birth employment trends but diverge
-              sharply after birth, generating persistent employment gaps. These effects are
-              larger for less educated mothers and for women in less family-friendly jobs.
-              The results identify postpartum depression as an important and unequal
-              contributor to the motherhood penalty.
+            <div class="abstract-text" id="abs-3">
+              This paper studies whether parliamentary deliberation affects policy-making,
+              and whether its effects depend on public exposure. Using quasi-random variation
+              from the computerized ballot that determines which policies are discussed during
+              Question Hour in the Indian Parliament, we show that debated issues are more likely
+              to appear in subsequent bills and that related bills progress faster through the
+              legislative process. These effects are substantially stronger when debate receives
+              media coverage. Reductions in news attention cut the policy impact of debate by
+              roughly half, implying that public exposure is an important mechanism through which
+              deliberation shapes policy.
             </div>
           </li>
-        </ul>
+        </ol>
       </div>
 
       <div id="development-culture" class="theme">
         <h3 class="theme-title">Development and Culture</h3>
 
-        <ul class="paper-list">
+        <ol class="paper-list">
           <li>
             <p class="paper-title">Political Empowerment and Marital Practices</p>
             <p class="paper-details">Accepted, <span class="journal">Journal of Development Economics</span></p>
@@ -403,47 +408,54 @@
               values rather than origin per se.
             </div>
           </li>
-        </ul>
+        </ol>
       </div>
 
-      <div id="political-economy" class="theme">
-        <h3 class="theme-title">Political Economy</h3>
+      <div id="gender" class="theme">
+        <h3 class="theme-title">Gender</h3>
 
-        <ul class="paper-list">
+        <ol class="paper-list">
           <li>
-            <p class="paper-title">Government by Discussion: Deliberation, Media, and Policy-Making</p>
+            <p class="paper-title">Postpartum Depression and the Motherhood Penalty</p>
+            <p class="paper-details">R&amp;R, <span class="journal">The Review of Economics and Statistics</span></p>
             <p class="paper-details">
               with
-              <a class="coauthor" href="https://sites.google.com/view/elahehfatemipour/" target="_blank" rel="noopener noreferrer">Elaheh Fatemipour</a>
+              <a class="coauthor" href="https://sites.google.com/site/srbhalotra/" target="_blank" rel="noopener noreferrer">Sonia Bhalotra</a>,
+              <a class="coauthor" href="https://meltemdaysal.com/" target="_blank" rel="noopener noreferrer">N. Meltem Daysal</a>,
+              <a class="coauthor" href="https://www.louisfreget.com/" target="_blank" rel="noopener noreferrer">Louis Fréget</a>,
+              <a class="coauthor" href="https://sites.google.com/view/jonas-hirani/home" target="_blank" rel="noopener noreferrer">Jonas Cuzulan Hirani</a>,
+              <a class="coauthor" href="https://www.mirceatrandafir.com/" target="_blank" rel="noopener noreferrer">Mircea Trandafir</a>,
+              <a class="coauthor" href="https://sites.google.com/site/miriamwuestecon/home" target="_blank" rel="noopener noreferrer">Miriam Wüst</a>,
+              and
+              <a class="coauthor" href="https://tomzohar.com/" target="_blank" rel="noopener noreferrer">Tom Zohar</a>
             </p>
             <p class="paper-actions">
               <a
                 class="action-link"
-                href="https://www.dropbox.com/scl/fi/803fumqpmqj4j134j91n3/Government-by-Discussion.pdf?dl=0&amp;rlkey=k6c8n99eipu1pgesh965uweqg"
+                href="https://www.dropbox.com/scl/fi/798tjt3nt977yh8pphc39/CP_and_mental_health.pdf?dl=0&amp;rlkey=nqs4angdssjtipb246vvfz5w7"
                 target="_blank"
                 rel="noopener noreferrer"
               >[pdf]</a>
-              <button type="button" class="abstract-toggle" data-target="abs-3">[abstract]</button>
+              <button type="button" class="abstract-toggle" data-target="abs-2">[abstract]</button>
             </p>
-            <div class="abstract-text" id="abs-3">
-              This paper studies whether parliamentary deliberation affects policy-making,
-              and whether its effects depend on public exposure. Using quasi-random variation
-              from the computerized ballot that determines which policies are discussed during
-              Question Hour in the Indian Parliament, we show that debated issues are more likely
-              to appear in subsequent bills and that related bills progress faster through the
-              legislative process. These effects are substantially stronger when debate receives
-              media coverage. Reductions in news attention cut the policy impact of debate by
-              roughly half, implying that public exposure is an important mechanism through which
-              deliberation shapes policy.
+            <div class="abstract-text" id="abs-2">
+              This paper studies how postpartum depression affects mothers’ labor-market
+              trajectories after childbirth. Using Danish administrative records linked to
+              validated postpartum depression screenings, we show that depressed and
+              non-depressed mothers follow similar pre-birth employment trends but diverge
+              sharply after birth, generating persistent employment gaps. These effects are
+              larger for less educated mothers and for women in less family-friendly jobs.
+              The results identify postpartum depression as an important and unequal
+              contributor to the motherhood penalty.
             </div>
           </li>
-        </ul>
+        </ol>
       </div>
 
       <div id="covid" class="theme">
         <h3 class="theme-title">Covid</h3>
 
-        <ul class="paper-list">
+        <ol class="paper-list">
           <li>
             <p class="paper-title">Exponential Growth Bias in the Prediction of COVID-19 Spread and Economic Expectation</p>
             <p class="paper-details"><span class="journal">Economica</span>, 2023</p>
@@ -500,7 +512,7 @@
               is presented can improve risk perception and public-health behavior.
             </div>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
